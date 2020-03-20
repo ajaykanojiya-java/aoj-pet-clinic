@@ -1,4 +1,4 @@
-package com.ajayonjava.aojpetclinic;
+package aojpetclinic;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
