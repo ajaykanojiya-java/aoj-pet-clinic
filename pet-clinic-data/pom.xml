@@ -10,6 +10,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>pet-clinic-data</artifactId>
+
+    <!-- spring boot 2.0,  we need to add below properties to make our repackaging jar small
+     as repackaging jar will not contain all the dependencies-->
+    <properties>
+        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -46,9 +53,12 @@
                         <goals>
                             <goal>repackage</goal>
                         </goals>
-                        <configuration>
-                            <skip>true</skip>
-                        </configuration>
+                        <!--
+                        If we use spring boot lesser version than 2.0 then to make repackaging we need to add below configuration
+                            <configuration>
+                                <skip>true</skip>
+                            </configuration>
+                        -->
                     </execution>
                 </executions>
             </plugin>
