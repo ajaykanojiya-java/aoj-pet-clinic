@@ -24,7 +24,8 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <start-class>com.ajayonjava.aojpetclinic.AojPetClinicApplication</start-class>
+        <!--  if use spring boot version less than 2 then we need to add below starting class name-->
+        <!-- <start-class>com.ajayonjava.aojpetclinic.AojPetClinicApplication</start-class>-->
     </properties>
     <build>
         <plugins>
@@ -32,6 +33,17 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <goals>install</goals>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+    <scm>
+        <developerConnection>scm:git:git@github.com:ajaykanojiya-java/aoj-pet-clinic</developerConnection>
+    </scm>
 </project>
