@@ -24,6 +24,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <start-class>com.ajayonjava.aojpetclinic.AojPetClinicApplication</start-class>
     </properties>
     <build>
         <plugins>
