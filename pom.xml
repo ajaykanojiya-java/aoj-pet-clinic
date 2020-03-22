@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <groupId>com.ajayonjava</groupId>
     <artifactId>aoj-pet-clinic</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
 
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
@@ -53,6 +53,6 @@
     </build>
     <scm>
         <developerConnection>scm:git:https://github.com/ajaykanojiya-java/aoj-pet-clinic.git</developerConnection>
-    <tag>aoj-pet-clinic-0.0.2</tag>
+    <tag>HEAD</tag>
   </scm>
 </project>
