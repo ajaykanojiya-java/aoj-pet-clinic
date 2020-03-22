@@ -43,7 +43,7 @@
         </plugins>
     </build>
     <scm>
-        <developerConnection>scm:git:https://${ajaykanojiya-java}:${@Sonyk310i}@github.com:ajaykanojiya-java/aoj-pet-clinic.git</developerConnection>
+        <connection>scm:git:https://${ajaykanojiya-java}:${@Sonyk310i}@github.com:ajaykanojiya-java/aoj-pet-clinic.git</connection>
         <!--<developerConnection>scm:git:git@github.com/ajaykanojiya-java/aoj-pet-clinic.git</developerConnection>-->
         <!--https://github.com/ajaykanojiya-java/aoj-pet-clinic.git-->
         <tag>aoj-pet-clinic-0.0.1</tag>
