@@ -52,10 +52,6 @@
         </plugins>
     </build>
     <scm>
-        <!--<developerConnection>scm:git:git@github.com/ajaykanojiya-java/aoj-pet-clinic.git</developerConnection>-->
-        <!--https://github.com/ajaykanojiya-java/aoj-pet-clinic.git-->
-        <tag>HEAD</tag>
-
-    <developerConnection>scm:git:git@github.com:ajaykanojiya-java/aoj-pet-clinic</developerConnection>
+        <developerConnection>scm:git:https://github.com/ajaykanojiya-java/aoj-pet-clinic.git</developerConnection>
   </scm>
 </project>
