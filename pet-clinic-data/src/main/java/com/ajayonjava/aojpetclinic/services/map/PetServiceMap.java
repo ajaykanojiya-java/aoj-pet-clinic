@@ -1,11 +1,11 @@
 package com.ajayonjava.aojpetclinic.services.map;
 
 import com.ajayonjava.aojpetclinic.model.Pet;
-import com.ajayonjava.aojpetclinic.services.CrudService;
+import com.ajayonjava.aojpetclinic.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet,Long> implements CrudService<Pet,Long> {
+public class PetServiceMap extends AbstractMapService<Pet,Long> implements PetService {
 
     @Override
     public Pet findById(Long id) {
