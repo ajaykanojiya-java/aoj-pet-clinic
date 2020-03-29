@@ -4,18 +4,21 @@ import com.ajayonjava.aojpetclinic.model.Owner;
 import com.ajayonjava.aojpetclinic.model.Vet;
 import com.ajayonjava.aojpetclinic.services.OwnerService;
 import com.ajayonjava.aojpetclinic.services.VetService;
-import com.ajayonjava.aojpetclinic.services.map.OwnerServiceMap;
-import com.ajayonjava.aojpetclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader(){
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    //@Autowired: no need to put @Autowired because we have defined parametrized constructor
+    //so while creating object of this class spring will automatically inject the object dependency.
+    //@Autowired can be used on member var of class but constructor is best practice.
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
@@ -33,6 +36,7 @@ public class DataLoader implements CommandLineRunner {
 
         ownerService.save(owner1);
         ownerService.save(owner2);
+        System.out.println("Owners data loaded....");
 
         Vet vet1 = new Vet();
         vet1.setId(1L);
@@ -46,5 +50,6 @@ public class DataLoader implements CommandLineRunner {
 
         vetService.save(vet1);
         vetService.save(vet2);
+        System.out.println("Vet data loaded....");
     }
 }

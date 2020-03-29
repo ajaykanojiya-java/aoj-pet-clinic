@@ -2,9 +2,11 @@ package com.ajayonjava.aojpetclinic.services.map;
 
 import com.ajayonjava.aojpetclinic.model.Owner;
 import com.ajayonjava.aojpetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service //This is an indication that this class is spring managed bean and will be initialized while startup
 public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService {
 
     @Override
