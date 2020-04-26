@@ -1,7 +1,11 @@
 package com.ajayonjava.aojpetclinic.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "VISIT")
 public class Visit extends BaseEntity {
     private LocalDate date;
     private String description;
