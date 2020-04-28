@@ -4,11 +4,13 @@ import com.ajayonjava.aojpetclinic.model.Specialty;
 import com.ajayonjava.aojpetclinic.model.Vet;
 import com.ajayonjava.aojpetclinic.services.SpecialtyService;
 import com.ajayonjava.aojpetclinic.services.VetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service //This is an indication that this class is spring managed bean and will be initialized while startup
+@Profile({"default","map"})
 public class VetMapService extends AbstractMapService<Vet,Long> implements VetService {
     private SpecialtyService specialtyService;
 

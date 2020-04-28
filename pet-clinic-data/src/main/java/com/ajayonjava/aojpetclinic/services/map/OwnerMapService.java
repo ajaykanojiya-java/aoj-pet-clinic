@@ -5,11 +5,13 @@ import com.ajayonjava.aojpetclinic.model.Pet;
 import com.ajayonjava.aojpetclinic.services.OwnerService;
 import com.ajayonjava.aojpetclinic.services.PetService;
 import com.ajayonjava.aojpetclinic.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service //This is an indication that this class is spring managed bean and will be initialized while startup
+@Profile({"default","map"})
 public class OwnerMapService extends AbstractMapService<Owner,Long> implements OwnerService {
 
     private PetService petService;
